@@ -1,44 +1,29 @@
 import { FC } from 'react';
 import { IconButton } from '@mui/material';
-import activeEmpty from '../assets/notification/activeEmpty.svg';
-import activeBadge from '../assets/notification/activeBadge.svg';
-import defaultEmpty from '../assets/notification/defaultEmpty.svg';
-import defaultBadge from '../assets/notification/defaultBadge.svg';
-import hoverEmpty from '../assets/notification/hoverEmpty.svg';
-import hoverBadge from '../assets/notification/hoverBadge.svg';
+import IconEmpty from '../assets/notificationEmpty.svg?react';
+import IconBadge from '../assets/notificationBadge.svg?react';
 
 interface NotificationProps {
   isNotificationsEmpty: boolean;
-  isNotificationsOpen: boolean;
 }
 
-const Notification: FC<NotificationProps> = ({
-  isNotificationsEmpty,
-  isNotificationsOpen,
-}) => {
+const Notification: FC<NotificationProps> = ({ isNotificationsEmpty }) => {
   return (
     <IconButton
       sx={{
-        backgroundImage: `url(${
-          isNotificationsEmpty
-            ? isNotificationsOpen
-              ? activeEmpty
-              : defaultEmpty
-            : isNotificationsOpen
-            ? activeBadge
-            : defaultBadge
-        })`,
-        width: '32px',
-        height: '32px',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+        padding: '0',
+        color: '#000',
         '&:hover': {
-          backgroundImage: `url(${
-            isNotificationsEmpty ? hoverEmpty : hoverBadge
-          })`,
+          color: '#342DF2',
+        },
+        '&:active': {
+          color: '#140DDA',
         },
       }}
-    />
+      disableRipple
+    >
+      {isNotificationsEmpty ? <IconEmpty /> : <IconBadge />}
+    </IconButton>
   );
 };
 

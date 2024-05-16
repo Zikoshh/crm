@@ -8,7 +8,6 @@ interface HeaderButtonsProps {
   lastName: string;
   avatar: string;
   isNotificationsEmpty: boolean;
-  isNotificationsOpen: boolean;
 }
 
 const HeaderButtons: FC<HeaderButtonsProps> = ({
@@ -16,15 +15,21 @@ const HeaderButtons: FC<HeaderButtonsProps> = ({
   lastName,
   avatar,
   isNotificationsEmpty,
-  isNotificationsOpen,
 }) => {
   return (
     <Box sx={{ display: 'flex', columnGap: '12px' }}>
-      <Box sx={{ backgroundColor: '#E1E1F7', borderRadius: '10px' }}>
-        <Notification
-          isNotificationsEmpty={isNotificationsEmpty}
-          isNotificationsOpen={isNotificationsOpen}
-        />
+      <Box
+        sx={{
+          backgroundColor: '#E1E1F7',
+          borderRadius: '10px',
+          width: '32px',
+          height: '32px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Notification isNotificationsEmpty={isNotificationsEmpty} />
       </Box>
       <HeaderAvatar nameAvatar={firstName[0] + lastName[0]} avatar={avatar} />
     </Box>

@@ -28,8 +28,7 @@ const Header = () => {
         firstName={User.firstName}
         lastName={User.lastName}
         avatar={User.avatar}
-        isNotificationsEmpty={false}
-        isNotificationsOpen={false}
+        isNotificationsEmpty={true}
       />
     </Box>
   );
