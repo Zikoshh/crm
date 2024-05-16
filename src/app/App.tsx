@@ -1,4 +1,4 @@
-import { Box, ThemeProvider } from '@mui/material';
+import { Box, CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './theme/theme';
 import './fonts/Inter/inter.css';
 import Header from '../widgets/Header';
@@ -8,13 +8,12 @@ import { Outlet } from 'react-router-dom';
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Box>
+      <CssBaseline />
         <Header />
         <Box>
           <Sidebar />
           <Outlet />
         </Box>
-      </Box>
     </ThemeProvider>
   );
 };
