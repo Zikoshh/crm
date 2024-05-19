@@ -54,7 +54,7 @@ npm run dev
 <table>
   <tr>
     <td align="center">
-      <a href="#sadtakesh1">
+      <a href="https://github.com/sadtakesh1">
         <img src="https://avatars.githubusercontent.com/u/126825418?v=4" width="100px;" alt="sadtakesh1 Profile Picture"/><br>
         <sub>
           <b>sadtakesh1</b>
