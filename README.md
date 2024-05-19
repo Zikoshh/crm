@@ -33,7 +33,7 @@
 
 <h3>Необходимые программы</h3>
 
-- [NodeJs]([https://github.com/](https://nodejs.org/en))
+- [NodeJs](https://nodejs.org/en)
 
 <h3>Клонирование</h3>
 
