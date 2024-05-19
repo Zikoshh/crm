@@ -31,8 +31,6 @@
 
 <h2 id="started">🚀 Начало работы</h2>
 
-Here you describe how to run your project locally
-
 <h3>Необходимые программы</h3>
 
 - [NodeJs]([https://github.com/](https://nodejs.org/en))
