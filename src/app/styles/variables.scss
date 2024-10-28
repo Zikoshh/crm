@@ -1,0 +1,212 @@
+$font-family: 'Inter', sans-serif;
+
+$f-w-regular: 400;
+$f-w-medium: 500;
+$f-w-semi-bold: 600;
+$f-w-bold: 700;
+
+$color-base-brand: rgba(98, 93, 245, 1);
+$color-base-brand-hover: rgba(52, 45, 242, 1);
+$color-base-brand-pressed: rgba(20, 13, 218, 1);
+$color-base-brand-focus: rgba(225, 225, 247, 1);
+
+$color-base-background: rgba(255, 255, 255, 1);
+$color-base-background-purple: rgba(251, 249, 255, 1);
+$color-base-element: rgba(33, 33, 33, 1);
+$color-base-generic: rgba(247, 247, 248, 1);
+$color-base-generic-hover: rgba(235, 235, 237, 1);
+$color-base-generic-pressed: rgba(195, 195, 201, 1);
+
+$color-base-float: rgba(33, 33, 33, 0.28);
+$color-base-float-heavy: rgba(33, 33, 33, 0.86);
+
+$color-secondary-message: rgba(252, 76, 76, 1);
+$color-secondary-message-disabled: rgba(250, 181, 181, 1);
+$color-secondary-danger: rgba(251, 57, 57, 1);
+$color-secondary-danger-hover: rgba(200, 50, 50, 1);
+$color-secondary-danger-pressed: rgba(165, 42, 42, 1);
+$color-secondary-error-additional: rgba(248, 152, 152, 1);
+$color-secondary-error-light-additional: rgba(253, 226, 226, 1);
+$color-secondary-error-light: rgba(254, 240, 240, 1);
+$color-secondary-positive: rgba(83, 192, 137, 1);
+$color-secondary-positive-hover: rgba(75, 169, 122, 1);
+$color-secondary-positive-pressed: rgba(44, 135, 89, 1);
+$color-secondary-warning: rgba(246, 159, 28, 1);
+$color-secondary-warning-hover: rgba(221, 135, 6, 1);
+$color-secondary-warning-pressed: rgba(188, 113, 0, 1);
+$color-secondary-warning-light: rgba(252, 246, 236, 1);
+
+$color-semantic-red: rgba(253, 212, 212, 1);
+$color-semantic-green: rgba(209, 249, 238, 1);
+$color-semantic-orange: rgba(255, 226, 204, 1);
+$color-semantic-blue: rgba(204, 216, 255, 1);
+$color-semantic-purple: rgba(247, 226, 254, 1);
+$color-semantic-pink: rgba(254, 204, 230, 1);
+$color-semantic-gray: rgba(232, 232, 234, 1);
+
+$color-text-base: rgba(33, 33, 33, 1);
+$color-text-base: rgba(252, 252, 252, 1);
+$color-text-base: rgba(236, 236, 236, 1);
+$color-text-base: rgba(195, 195, 201, 1);
+$color-text-base: rgba(171, 171, 171, 1);
+$color-text-semantic-red: rgba(246, 83, 83, 1);
+$color-text-semantic-green: rgba(54, 196, 160, 1);
+$color-text-semantic-orange: rgba(255, 138, 52, 1);
+$color-text-semantic-blue: rgba(62, 107, 255, 1);
+$color-text-semantic-purple: rgba(226, 148, 249, 1);
+$color-text-semantic-pink: rgba(251, 58, 158, 1);
+$color-text-semantic-gray: rgba(107, 104, 114, 1);
+
+$color-lines-border-gray: rgba(195, 195, 201, 1);
+$color-lines-border-gray-hover: rgba(165, 165, 172, 1);
+$color-lines-border-light-gray: rgba(213, 213, 213, 1);
+
+%f-sizes-extra-small {
+  font-size: 20px;
+  line-height: 12px;
+}
+
+%f-sizes-small {
+  font-size: 22px;
+  line-height: 13px;
+}
+
+%f-sizes-base {
+  font-size: 22px;
+  line-height: 14px;
+}
+
+%f-sizes-medium {
+  font-size: 24px;
+  line-height: 16px;
+}
+
+%f-sizes-large {
+  font-size: 26px;
+  line-height: 18px;
+}
+
+%f-sizes-extra-large {
+  font-size: 28px;
+  line-height: 20px;
+}
+
+%text-extra-small-s {
+  @extend %f-sizes-extra-small;
+  font-weight: $f-w-regular;
+}
+
+%text-extra-small-m {
+  @extend %f-sizes-extra-small;
+  font-weight: $f-w-medium;
+}
+
+%text-extra-small-l {
+  @extend %f-sizes-extra-small;
+  font-weight: $f-w-semi-bold;
+}
+
+%text-extra-small-xl {
+  @extend %f-sizes-extra-small;
+  font-weight: $f-w-bold;
+}
+
+%text-small-s {
+  @extend %f-sizes-small;
+  font-weight: $f-w-regular;
+}
+
+%text-small-m {
+  @extend %f-sizes-small;
+  font-weight: $f-w-medium;
+}
+
+%text-small-l {
+  @extend %f-sizes-small;
+  font-weight: $f-w-semi-bold;
+}
+
+%text-small-xl {
+  @extend %f-sizes-small;
+  font-weight: $f-w-bold;
+}
+
+%text-base-s {
+  @extend %f-sizes-base;
+  font-weight: $f-w-regular;
+}
+
+%text-base-m {
+  @extend %f-sizes-base;
+  font-weight: $f-w-medium;
+}
+
+%text-base-l {
+  @extend %f-sizes-base;
+  font-weight: $f-w-semi-bold;
+}
+
+%text-base-xl {
+  @extend %f-sizes-base;
+  font-weight: $f-w-bold;
+}
+
+%text-medium-s {
+  @extend %f-sizes-medium;
+  font-weight: $f-w-regular;
+}
+
+%text-medium-m {
+  @extend %f-sizes-medium;
+  font-weight: $f-w-medium;
+}
+
+%text-medium-l {
+  @extend %f-sizes-medium;
+  font-weight: $f-w-semi-bold;
+}
+
+%text-medium-xl {
+  @extend %f-sizes-medium;
+  font-weight: $f-w-bold;
+}
+
+%text-large-s {
+  @extend %f-sizes-large;
+  font-weight: $f-w-regular;
+}
+
+%text-large-m {
+  @extend %f-sizes-large;
+  font-weight: $f-w-medium;
+}
+
+%text-large-l {
+  @extend %f-sizes-large;
+  font-weight: $f-w-semi-bold;
+}
+
+%text-large-xl {
+  @extend %f-sizes-large;
+  font-weight: $f-w-bold;
+}
+
+%text-extra-large-s {
+  @extend %f-sizes-extra-large;
+  font-weight: $f-w-regular;
+}
+
+%text-extra-large-m {
+  @extend %f-sizes-extra-large;
+  font-weight: $f-w-medium;
+}
+
+%text-extra-large-l {
+  @extend %f-sizes-extra-large;
+  font-weight: $f-w-semi-bold;
+}
+
+%text-extra-large-xl {
+  @extend %f-sizes-extra-large;
+  font-weight: $f-w-bold;
+}
