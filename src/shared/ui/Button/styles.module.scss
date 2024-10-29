@@ -1,0 +1,204 @@
+@use '../../../app/styles/variables' as v;
+
+$transition-duration: 0.1s;
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: none;
+  transition:
+    background-color $transition-duration ease,
+    color $transition-duration ease,
+    border $transition-duration ease;
+  @include v.apply-text-styles(base, v.$f-w-medium);
+
+  &__xs {
+    padding: 1px 0;
+    border-radius: 12px;
+  }
+
+  &__s {
+    padding: 3px 0;
+    border-radius: 8px;
+  }
+
+  &__m {
+    padding: 7px 0;
+    border-radius: 9999px;
+  }
+
+  &__l {
+    padding: 9px 0;
+    border-radius: 12px;
+  }
+
+  &[data-plain='false'] {
+    color: v.$color-text-base-light;
+
+    &[data-variant='primary'] {
+      background-color: v.$color-base-brand;
+
+      &:hover {
+        background-color: v.$color-base-brand-hover;
+      }
+
+      &:active {
+        background-color: v.$color-base-brand-pressed;
+      }
+
+      &:disabled {
+        background-color: v.$color-base-brand-focus;
+      }
+
+      &[data-loading='true'] {
+        background-color: v.$color-base-brand-hover;
+      }
+    }
+
+    &[data-variant='danger'] {
+      background-color: v.$color-secondary-danger;
+
+      &:hover {
+        background-color: v.$color-secondary-danger-hover;
+      }
+
+      &:active {
+        background-color: v.$color-secondary-danger-pressed;
+      }
+
+      &:disabled {
+        background-color: v.$color-secondary-message-disabled;
+      }
+
+      &[data-loading='true'] {
+        background-color: v.$color-secondary-danger-hover;
+      }
+    }
+
+    &[data-variant='default'] {
+      color: v.$color-text-base;
+      background-color: v.$color-base-background;
+      border: 1px solid v.$color-lines-border-gray;
+
+      &:hover {
+        color: v.$color-base-brand-hover;
+        background-color: v.$color-base-background-purple;
+        border-color: v.$color-base-brand-focus;
+      }
+
+      &:active {
+        color: v.$color-base-brand-pressed;
+        background-color: v.$color-base-brand-focus;
+        border-color: v.$color-base-brand-pressed;
+      }
+
+      &:disabled {
+        color: v.$color-text-base-gray;
+        background-color: v.$color-base-background;
+        border-color: v.$color-lines-border-light-gray;
+      }
+
+      &[data-loading='true'] {
+        color: v.$color-text-base-gray-hard;
+        background-color: v.$color-base-background;
+        border-color: v.$color-lines-border-light-gray;
+      }
+    }
+  }
+
+  &[data-plain='true'] {
+    border: 1px solid;
+
+    &[data-variant='primary'] {
+      color: v.$color-base-brand;
+      background-color: v.$color-base-background-purple;
+      border-color: v.$color-base-brand-focus;
+
+      &:hover {
+        color: v.$color-text-base-light;
+        background-color: v.$color-base-brand-hover;
+        border-color: v.$color-base-brand-hover;
+      }
+
+      &:active {
+        color: v.$color-text-base-light;
+        background-color: v.$color-base-brand-pressed;
+        border-color: v.$color-base-brand-pressed;
+      }
+
+      &:disabled {
+        color: v.$color-base-brand-focus;
+        background-color: v.$color-base-background-purple;
+        border-color: v.$color-base-brand-focus;
+      }
+
+      &[data-loading='true'] {
+        color: v.$color-base-brand-hover;
+        background-color: v.$color-base-background-purple;
+        border-color: v.$color-base-brand-focus;
+      }
+    }
+
+    &[data-variant='danger'] {
+      color: v.$color-secondary-danger;
+      background-color: v.$color-base-background;
+      border-color: v.$color-secondary-message-disabled;
+
+      &:hover {
+        color: v.$color-text-base-light;
+        background-color: v.$color-secondary-danger;
+        border-color: v.$color-secondary-danger;
+      }
+
+      &:active {
+        color: v.$color-text-base-light;
+        background-color: v.$color-secondary-danger-pressed;
+        border-color: v.$color-secondary-danger-pressed;
+      }
+
+      &:disabled {
+        color: v.$color-secondary-message-disabled;
+        background-color: v.$color-secondary-error-light;
+        border-color: v.$color-secondary-error-light-additional;
+      }
+
+      &[data-loading='true'] {
+        color: v.$color-secondary-error-additional;
+        background-color: v.$color-secondary-error-light;
+        border-color: v.$color-secondary-message-disabled;
+      }
+    }
+  }
+
+  &[data-variant='default'] {
+    color: v.$color-text-semantic-gray;
+    background-color: v.$color-base-background;
+    border-color: v.$color-lines-border-light-gray;
+
+    &:hover {
+      color: v.$color-base-brand-hover;
+      background-color: v.$color-text-base-light;
+      border-color: v.$color-base-brand-hover;
+    }
+
+    &:active {
+      color: v.$color-base-brand;
+      background-color: v.$color-text-base-light;
+      border-color: v.$color-base-brand;
+    }
+
+    &:disabled {
+      color: v.$color-text-base-gray;
+      background-color: v.$color-base-background;
+      border-color: v.$color-lines-border-light-gray;
+    }
+
+    &[data-loading='true'] {
+      color: v.$color-text-base-gray-hard;
+      background-color: v.$color-base-background;
+      border-color: v.$color-lines-border-light-gray;
+    }
+  }
+}
