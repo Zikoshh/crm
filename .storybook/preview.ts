@@ -1,4 +1,6 @@
-import type { Preview } from "@storybook/react";
+import type { Preview } from '@storybook/react';
+import './styles/reset.css';
+import './fonts/Inter/inter.css';
 
 const preview: Preview = {
   parameters: {
