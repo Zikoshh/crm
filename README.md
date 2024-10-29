@@ -26,7 +26,6 @@
 - TypeScript
 - React
 - React Router
-- Material UI
 - FSD
 
 <h2 id="started">🚀 Начало работы</h2>
