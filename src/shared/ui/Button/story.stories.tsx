@@ -1,9 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Button from './index';
-import { ButtonProps } from './types';
 import LoadingIcon from '../../assets/loading.svg?react';
 
-const meta: Meta<ButtonProps> = {
+const meta: Meta<typeof Button> = {
   title: 'UI/Button',
   component: Button,
   decorators: [
@@ -22,7 +21,7 @@ const meta: Meta<ButtonProps> = {
 
 export default meta;
 
-type Story = StoryObj<ButtonProps>;
+type Story = StoryObj<typeof Button>;
 
 export const Overview: Story = {
   args: {
