@@ -1,0 +1,114 @@
+@use '../../../app/styles/variables' as v;
+
+.text {
+  text-align: start;
+  color: inherit;
+
+  &__extra-small {
+    &[data-font-weight='regular'] {
+      @include v.apply-text-styles(extra-small, v.$f-w-regular);
+    }
+
+    &[data-font-weight='medium'] {
+      @include v.apply-text-styles(extra-small, v.$f-w-medium);
+    }
+
+    &[data-font-weight='semi-bold'] {
+      @include v.apply-text-styles(extra-small, v.$f-w-semi-bold);
+    }
+
+    &[data-font-weight='bold'] {
+      @include v.apply-text-styles(extra-small, v.$f-w-bold);
+    }
+  }
+
+  &__small {
+    &[data-font-weight='regular'] {
+      @include v.apply-text-styles(small, v.$f-w-regular);
+    }
+
+    &[data-font-weight='medium'] {
+      @include v.apply-text-styles(small, v.$f-w-medium);
+    }
+
+    &[data-font-weight='semi-bold'] {
+      @include v.apply-text-styles(small, v.$f-w-semi-bold);
+    }
+
+    &[data-font-weight='bold'] {
+      @include v.apply-text-styles(small, v.$f-w-bold);
+    }
+  }
+
+  &__base {
+    &[data-font-weight='regular'] {
+      @include v.apply-text-styles(base, v.$f-w-regular);
+    }
+
+    &[data-font-weight='medium'] {
+      @include v.apply-text-styles(base, v.$f-w-medium);
+    }
+
+    &[data-font-weight='semi-bold'] {
+      @include v.apply-text-styles(base, v.$f-w-semi-bold);
+    }
+
+    &[data-font-weight='bold'] {
+      @include v.apply-text-styles(base, v.$f-w-bold);
+    }
+  }
+
+  &__medium {
+    &[data-font-weight='regular'] {
+      @include v.apply-text-styles(medium, v.$f-w-regular);
+    }
+
+    &[data-font-weight='medium'] {
+      @include v.apply-text-styles(medium, v.$f-w-medium);
+    }
+
+    &[data-font-weight='semi-bold'] {
+      @include v.apply-text-styles(medium, v.$f-w-semi-bold);
+    }
+
+    &[data-font-weight='bold'] {
+      @include v.apply-text-styles(medium, v.$f-w-bold);
+    }
+  }
+
+  &__large {
+    &[data-font-weight='regular'] {
+      @include v.apply-text-styles(large, v.$f-w-regular);
+    }
+
+    &[data-font-weight='medium'] {
+      @include v.apply-text-styles(large, v.$f-w-medium);
+    }
+
+    &[data-font-weight='semi-bold'] {
+      @include v.apply-text-styles(large, v.$f-w-semi-bold);
+    }
+
+    &[data-font-weight='bold'] {
+      @include v.apply-text-styles(large, v.$f-w-bold);
+    }
+  }
+
+  &__extra-large {
+    &[data-font-weight='regular'] {
+      @include v.apply-text-styles(extra-large, v.$f-w-regular);
+    }
+
+    &[data-font-weight='medium'] {
+      @include v.apply-text-styles(extra-large, v.$f-w-medium);
+    }
+
+    &[data-font-weight='semi-bold'] {
+      @include v.apply-text-styles(extra-large, v.$f-w-semi-bold);
+    }
+
+    &[data-font-weight='bold'] {
+      @include v.apply-text-styles(extra-large, v.$f-w-bold);
+    }
+  }
+}
