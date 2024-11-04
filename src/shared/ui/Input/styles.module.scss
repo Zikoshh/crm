@@ -1,0 +1,115 @@
+@use '../../../app/styles/variables' as v;
+
+.label {
+  display: flex;
+  width: 100%;
+  border: 1px solid v.$color-lines-border-gray;
+  border-radius: 8px;
+  background-color: v.$color-base-background;
+  box-sizing: border-box;
+  cursor: text;
+
+  &:has(.input:hover) {
+    border-color: v.$color-lines-border-gray-hover;
+  }
+
+  &:has(.input:focus) {
+    border-color: v.$color-base-brand;
+  }
+
+  &:has(.input:disabled) {
+    background-color: v.$color-base-generic-hover;
+    border-color: v.$color-lines-border-light-gray;
+  }
+
+  &:has(.input:disabled) .clearButton {
+    background-color: v.$color-base-generic-hover;
+  }
+
+  &[data-size='s'] {
+    padding: 3px 8px;
+  }
+  &[data-size='m'] {
+    padding: 7px 12px;
+  }
+  &[data-size='l'] {
+    padding: 9px 16px;
+  }
+  &[data-error='true'] {
+    border-color: v.$color-secondary-danger;
+  }
+  &[data-error='true']:has(.input:hover) {
+    border-color: v.$color-secondary-danger-hover;
+  }
+  &[data-error='true']:has(.input:focus) {
+    border-color: v.$color-secondary-danger-pressed;
+  }
+  &[data-success='true'] {
+    border-color: v.$color-secondary-positive;
+  }
+  &[data-success='true']:has(.input:hover) {
+    border-color: v.$color-secondary-positive-hover;
+  }
+  &[data-success='true']:has(.input:focus) {
+    border-color: v.$color-secondary-positive-pressed;
+  }
+}
+
+.input {
+  color: v.$color-text-base;
+  width: 100%;
+  background-color: v.$color-base-background;
+  outline: none;
+  border: none;
+  padding: 0;
+
+  &:disabled {
+    background-color: v.$color-base-generic-hover;
+    color: v.$color-text-base-gray-hard;
+  }
+
+  &::placeholder {
+    color: v.$color-text-base-gray-hard;
+  }
+}
+
+.visualLabel {
+  color: v.$color-text-base;
+  @include v.apply-text-styles(small, v.$f-w-semi-bold);
+}
+
+.inputContainer {
+}
+
+.error {
+  color: v.$color-secondary-danger;
+  @include v.apply-text-styles(small, v.$f-w-regular);
+}
+
+.leftAdornment {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.iconsContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-left: 8px;
+  &:empty {
+    margin-left: 0;
+  }
+}
+
+.clearButton {
+  padding: 0;
+  border: none;
+  max-height: 14px;
+  background-color: v.$color-base-background;
+  cursor: pointer;
+  color: v.$color-secondary-danger;
+  &__color_gray {
+    color: v.$color-text-base-gray-hard;
+  }
+}
