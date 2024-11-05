@@ -1,0 +1,74 @@
+@use '../../../app/styles/variables' as v;
+
+.textarea {
+  color: v.$color-text-base;
+  width: 100%;
+  outline: none;
+  border: 1px solid v.$color-lines-border-gray;
+  border-radius: 8px;
+  background-color: v.$color-base-background;
+  box-sizing: border-box;
+  resize: none;
+
+  &:hover {
+    border-color: v.$color-lines-border-gray-hover;
+  }
+
+  &:focus {
+    border-color: v.$color-base-brand;
+  }
+
+  &:disabled {
+    color: v.$color-text-base-gray-hard;
+    background-color: v.$color-base-generic-hover;
+    border-color: v.$color-lines-border-light-gray;
+  }
+
+  &::placeholder {
+    color: v.$color-text-base-gray-hard;
+  }
+
+  &[data-size='s'] {
+    padding: 2px 9px;
+    @include v.apply-text-styles(small, v.$f-w-regular);
+  }
+  &[data-size='m'] {
+    padding: 5px 12px;
+    @include v.apply-text-styles(base, v.$f-w-regular);
+  }
+  &[data-size='l'] {
+    padding: 9px 16px;
+    @include v.apply-text-styles(base, v.$f-w-regular);
+  }
+  &[data-error='true'] {
+    border-color: v.$color-secondary-danger;
+  }
+  &[data-error='true']:hover {
+    border-color: v.$color-secondary-danger-hover;
+  }
+  &[data-error='true']:focus {
+    border-color: v.$color-secondary-danger-pressed;
+  }
+  &[data-success='true'] {
+    border-color: v.$color-secondary-positive;
+  }
+  &[data-success='true']:hover {
+    border-color: v.$color-secondary-positive-hover;
+  }
+  &[data-success='true']:focus {
+    border-color: v.$color-secondary-positive-pressed;
+  }
+}
+
+.label {
+  color: v.$color-text-base;
+  @include v.apply-text-styles(small, v.$f-w-semi-bold);
+}
+
+.textareaContainer {
+}
+
+.error {
+  color: v.$color-secondary-danger;
+  @include v.apply-text-styles(small, v.$f-w-regular);
+}
