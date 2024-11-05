@@ -28,12 +28,15 @@
 
   &[data-size='s'] {
     padding: 3px 8px;
+    @include v.apply-text-styles(small, v.$f-w-regular);
   }
   &[data-size='m'] {
     padding: 7px 12px;
+    @include v.apply-text-styles(base, v.$f-w-regular);
   }
   &[data-size='l'] {
     padding: 9px 16px;
+    @include v.apply-text-styles(base, v.$f-w-regular);
   }
   &[data-error='true'] {
     border-color: v.$color-secondary-danger;
@@ -62,6 +65,9 @@
   outline: none;
   border: none;
   padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
 
   &:disabled {
     background-color: v.$color-base-generic-hover;
