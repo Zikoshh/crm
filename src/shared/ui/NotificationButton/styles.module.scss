@@ -1,0 +1,18 @@
+@use '../../../app/styles/variables' as v;
+
+.button {
+  display: inline-flex;
+  padding: 6px;
+  background-color: v.$color-base-brand-focus;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: v.$color-base-brand-hover;
+  }
+
+  &:focus {
+    color: v.$color-base-brand-pressed;
+  }
+}
