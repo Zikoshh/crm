@@ -4,4 +4,5 @@ export interface AvatarProps {
   src?: string;
   firstName: string;
   lastName: string;
+  className: string;
 }

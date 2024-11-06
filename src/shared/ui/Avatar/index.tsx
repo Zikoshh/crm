@@ -9,9 +9,10 @@ const Avatar: FC<AvatarProps> = ({
   src,
   firstName,
   lastName,
+  className,
 }) => {
   return (
-    <div className={`${s.avatar} ${s[size]} ${s[shape]}`}>
+    <div className={`${s.avatar} ${s[size]} ${s[shape]} ${className}`}>
       {src ? (
         <img src={src} alt={firstName + ' ' + lastName} className={s.image} />
       ) : (
