@@ -1,0 +1,70 @@
+@use '../../../app/styles/variables' as v;
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: v.$color-text-base;
+  background-color: v.$color-base-generic-hover;
+
+  &.xss {
+    width: 20px;
+    height: 20px;
+    @include v.apply-text-styles(extra-small, v.$f-w-regular);
+  }
+
+  &.xs {
+    width: 24px;
+    height: 24px;
+    @include v.apply-text-styles(extra-small, v.$f-w-regular);
+  }
+
+  &.s {
+    width: 28px;
+    height: 28px;
+    @include v.apply-text-styles(small, v.$f-w-regular);
+  }
+
+  &.m {
+    width: 32px;
+    height: 32px;
+    @include v.apply-text-styles(small, v.$f-w-regular);
+  }
+
+  &.l {
+    width: 42px;
+    height: 42px;
+    @include v.apply-text-styles(base, v.$f-w-regular);
+  }
+
+  &.xl {
+    width: 50px;
+    height: 50px;
+    @include v.apply-text-styles(medium, v.$f-w-regular);
+  }
+
+  &.xxl {
+    width: 80px;
+    height: 80px;
+    @include v.apply-text-styles(extra-small, v.$f-w-regular);
+    font-size: 24px;
+  }
+
+  &.circle {
+    border-radius: 50%;
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+}
