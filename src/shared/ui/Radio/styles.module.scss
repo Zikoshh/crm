@@ -1,0 +1,122 @@
+@use '../../../app/styles/variables' as v;
+@use 'sass:map';
+
+$radio-sizes: (
+  s: 12px,
+  m: 14px,
+  l: 16px,
+);
+
+$radio-inner-sizes: (
+  s: 4px,
+  m: 5px,
+  l: 5px,
+);
+
+@mixin radio-size($size) {
+  width: map.get($radio-sizes, $size);
+  height: map.get($radio-sizes, $size);
+  &::before {
+    width: map.get($radio-inner-sizes, $size);
+    height: map.get($radio-inner-sizes, $size);
+  }
+}
+
+.radioWrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  cursor: pointer;
+  color: v.$color-text-base;
+  @include v.apply-text-styles(base);
+
+  &:hover .radio {
+    border-color: v.$color-base-brand;
+  }
+}
+
+.input {
+  display: none;
+
+  &:checked:not(:disabled) + .radio {
+    border: none;
+    background-color: v.$color-base-brand;
+  }
+
+  &[data-size='l']:checked + .radio::before {
+    content: '';
+    position: absolute;
+    top: 5.5px;
+    left: 5.5px;
+    border-radius: 50%;
+    background-color: v.$color-base-background;
+  }
+
+  &[data-size='m']:checked + .radio::before {
+    content: '';
+    position: absolute;
+    top: 4.5px;
+    left: 4.5px;
+    border-radius: 50%;
+    background-color: v.$color-base-background;
+  }
+
+  &[data-size='s']:checked + .radio::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+    background-color: v.$color-base-background;
+  }
+
+  &:disabled + .radio {
+    border-color: v.$color-base-generic-hover;
+    background-color: v.$color-base-generic;
+  }
+
+  &[data-size='l']:checked:disabled + .radio::before {
+    content: '';
+    position: absolute;
+    top: 4.5px;
+    left: 4.5px;
+    border-radius: 50%;
+    background-color: v.$color-base-generic-pressed;
+  }
+
+  &[data-size='m']:checked:disabled + .radio::before {
+    content: '';
+    position: absolute;
+    top: 3.5px;
+    left: 3.5px;
+    border-radius: 50%;
+    background-color: v.$color-base-generic-pressed;
+  }
+
+  &[data-size='s']:checked:disabled + .radio::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 50%;
+    background-color: v.$color-base-generic-pressed;
+  }
+}
+
+.radio {
+  border: 1px solid v.$color-lines-border-gray;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+
+  &__s {
+    @include radio-size(s);
+  }
+  &__m {
+    @include radio-size(m);
+  }
+  &__l {
+    @include radio-size(l);
+  }
+}
