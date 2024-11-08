@@ -1,0 +1,59 @@
+@use '../../../app/styles/variables' as v;
+
+.switch_wrapper {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 16px;
+}
+
+.input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+
+  &:checked:not(:disabled) + .switch {
+    background-color: v.$color-base-brand;
+  }
+
+  &:checked:not(:disabled) + .switch::before {
+    transform: translateX(14px);
+  }
+
+  &:disabled + .switch {
+    background-color: v.$color-semantic-gray;
+  }
+
+  &:checked:disabled + .switch {
+    background-color: v.$color-base-brand-focus;
+  }
+
+  &:checked:disabled + .switch::before {
+    transform: translateX(14px);
+  }
+}
+
+.switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: v.$color-lines-border-gray;
+  transition: 0.4s;
+  border-radius: 100px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    height: 12px;
+    width: 12px;
+    top: 2px;
+    left: 2px;
+    background-color: v.$color-base-background;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+}
