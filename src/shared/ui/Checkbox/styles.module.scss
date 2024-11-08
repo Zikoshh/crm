@@ -1,0 +1,98 @@
+@use '../../../app/styles/variables' as v;
+@use 'sass:map';
+
+$checkbox-sizes: (
+  s: 12px,
+  m: 14px,
+);
+
+$checkbox-icon-sizes: (
+  s: 8px,
+  m: 10px,
+);
+
+@mixin checkbox-size($size) {
+  width: map.get($checkbox-sizes, $size);
+  height: map.get($checkbox-sizes, $size);
+
+  & .icon {
+    width: map.get($checkbox-icon-sizes, $size);
+    height: map.get($checkbox-icon-sizes, $size);
+  }
+}
+
+.checkbox_wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  column-gap: 8px;
+  @include v.apply-text-styles(base);
+  color: v.$color-text-base;
+
+  &:hover .checkbox {
+    border-color: v.$color-base-brand;
+  }
+}
+
+.input {
+  display: none;
+
+  &:checked:not(:disabled) + .checkbox {
+    background-color: v.$color-base-brand;
+    border: none;
+    & .icon {
+      background-image: url('../../assets/checkbox-checked.svg');
+    }
+  }
+
+  &:indeterminate:not(:disabled) + .checkbox {
+    background-color: v.$color-base-brand;
+    border: none;
+    & .icon {
+      background-image: url('../../assets/checkbox-indeterminate.svg');
+    }
+  }
+
+  &:disabled + .checkbox {
+    border-color: v.$color-base-generic-hover;
+    background-color: v.$color-base-generic;
+  }
+
+  &:disabled:checked + .checkbox {
+    border-color: v.$color-base-generic-hover;
+    background-color: v.$color-base-generic;
+    & .icon {
+      color: v.$color-base-generic-pressed;
+      background-image: url('../../assets/checkbox-checked-disabled.svg');
+    }
+  }
+
+  &:disabled:indeterminate + .checkbox {
+    border-color: v.$color-base-generic-hover;
+    background-color: v.$color-base-generic;
+    & .icon {
+      color: v.$color-base-generic-pressed;
+      background-image: url('../../assets/checkbox-indeterminate-disabled.svg');
+    }
+  }
+}
+
+.checkbox {
+  border-radius: 4px;
+  border: 1px solid v.$color-lines-border-gray;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__s {
+    @include checkbox-size(s);
+  }
+  &__m {
+    @include checkbox-size(m);
+  }
+}
+
+.icon {
+  background-size: cover;
+}
